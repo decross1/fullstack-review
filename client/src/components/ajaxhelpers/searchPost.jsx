@@ -4,7 +4,7 @@ var React = require('react');
 var searchPost = (username) => {
   var data = JSON.stringify({username: username})
   $.ajax({
-    url: 'server url here', 
+    url: '/repos', 
     type: 'POST', 
     dataType: 'text',
     data: data, 

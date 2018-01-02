@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import Search from './components/Search.jsx';
 import RepoList from './components/RepoList.jsx';
-import searchPost from './components/helpers/searchPost.jsx'
+import searchPost from './components/ajaxhelpers/searchPost.jsx'
 
 class App extends React.Component {
   constructor(props) {
