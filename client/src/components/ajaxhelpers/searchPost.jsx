@@ -2,12 +2,13 @@ import $ from 'jquery';
 var React = require('react');
 
 var searchPost = (username) => {
-  var data = JSON.stringify({username: username})
+  var username = JSON.stringify({username: username})
+  // console.log(username);
   $.ajax({
-    url: '/repos', 
+    url: 'http://localhost:1128/repos', 
     type: 'POST', 
-    dataType: 'text',
-    data: data, 
+    contentType: 'application/json',
+    data: username, 
     success: (data) => {
       console.log('Post success', data);
     }, 
