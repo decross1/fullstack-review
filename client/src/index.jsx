@@ -13,15 +13,12 @@ class App extends React.Component {
       repos: []
     }
 
-    this.initFetch = this.initFetch.bind(this)
     this.search = this.search.bind(this)
     this.stateSet = this.stateSet.bind(this)
-
-    this.initFetch();
   }
 
-  initFetch() {
-    initGet(this.stateSet)
+  componentDidMount() {
+    initGet(this.stateSet)  
   }
 
   stateSet(repos) {
@@ -33,6 +30,7 @@ class App extends React.Component {
   search (term) {
     console.log(`${term} was searched`);
     searchPost(term);
+    initGet(this.stateSet);
   }
 
   render () {
